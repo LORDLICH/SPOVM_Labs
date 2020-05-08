@@ -10,7 +10,6 @@
 using namespace std;
 int main(int argc, char *argv[])
 {
-	char buff[100];
 	STARTUPINFO si;
 	PROCESS_INFORMATION pi;
 	TCHAR SecondProcess[] = TEXT("secondProcess");
@@ -37,9 +36,9 @@ int main(int argc, char *argv[])
 
 	auto time = chrono::system_clock::now();
 
-	time_t end_time = chrono::system_clock::to_time_t(time);
+	time_t currentTime = chrono::system_clock::to_time_t(time);
 
-	cout << ctime(&end_time);
+	cout << ctime(&currentTime);
 
 	cout << endl;
 
